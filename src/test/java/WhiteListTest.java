@@ -16,6 +16,9 @@ public class WhiteListTest {
         bialaLista = new WhiteList();
         bialaLista.initializeDriver();
         bialaLista.navigateToMainPage();
+        bialaLista.clickNipCheckbox();
+        bialaLista.typeNipNumber("9222834354");
+        bialaLista.clickSearchButton();
     }
     @AfterEach
     public void driverQuit(){
@@ -54,12 +57,12 @@ public class WhiteListTest {
     @Test
      public void testTypeNip(){
         System.out.println("Now called test method");
-            bialaLista.typeNipNumber("44456");
-            try
-            {Thread.sleep(3000);}
-            catch (Exception e){
-                e.printStackTrace();
-            }
+        bialaLista.typeNipNumber("44456");
+        try
+        {Thread.sleep(3000);}
+        catch (Exception e){
+            e.printStackTrace();
+        }
      }
      @Test
      public void testElements(){
@@ -82,6 +85,10 @@ public class WhiteListTest {
      @Test
     public void testClickSearchButton(){
         bialaLista.clickSearchButton();
+     }
+     @Test
+    public void testContractor(){
+        bialaLista.getContractor();
      }
 
 
