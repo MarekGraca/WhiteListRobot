@@ -39,4 +39,9 @@ public class FlatFile {
         webElement.click();
     }
 
+    public void quitDriver(){
+        driver.close();
+        driver.quit();
+    }
+
 }

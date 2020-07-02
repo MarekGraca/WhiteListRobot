@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Date;
 
 
-public class ReadFlatFile {
+public class GetFlatFile {
 
     public static final String downloadPath = "/Users/marekgraca/downloads/";
     public static final String [] arrayOfExtension = {"json"};
@@ -50,6 +50,7 @@ public class ReadFlatFile {
     public Date convertToDateViaSqlTimestamp(LocalDateTime dateToConvert) {
         return java.sql.Timestamp.valueOf(dateToConvert);
     }
+
 
 
 

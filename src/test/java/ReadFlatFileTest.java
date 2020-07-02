@@ -2,16 +2,14 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ReadFlatFileTest {
 
 
 
     @Test
     void readFiles() {
-        ReadFlatFile readFlatFile = new ReadFlatFile();
-        File file = readFlatFile.returnJsonFile();
+        GetFlatFile getFlatFile = new GetFlatFile();
+        File file = getFlatFile.returnJsonFile();
         if (file!=null){
             System.out.println(file.getName());
         }
@@ -24,7 +22,7 @@ class ReadFlatFileTest {
 
     @Test
     void deleteJSONFiles() {
-        ReadFlatFile readFlatFile = new ReadFlatFile();
-        readFlatFile.deleteJSONFiles();
+        GetFlatFile getFlatFile = new GetFlatFile();
+        getFlatFile.deleteJSONFiles();
     }
 }
